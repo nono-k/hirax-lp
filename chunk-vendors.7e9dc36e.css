@@ -79,3 +79,21 @@ html {
   opacity: 1;
   transform: translateY(0);
 }
+/* より強力な詳細度で指定するため、bodyを付与 */
+body [data-id="2003:906"],
+body [data-id="2003:945"],
+body [data-id="2003:886"] {
+  text-align: center !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  display: block !important;
+}
+
+body .fc-fc-i9o4Fi,
+body .frame-224-LnXzEX {
+  padding: 24px !important;
+  margin: 20px auto !important;
+  max-width: 90% !important;
+  position: relative !important;
+}
+
