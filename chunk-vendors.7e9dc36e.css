@@ -1,0 +1,48 @@
+element.style {
+}
+:root {
+}
+:root {
+    --alto: #d9d9d9;
+    --black: #000000;
+    --catalina-blue: #0b2f73;
+    --catalina-blue-2: #0b2f73b2;
+    --malachite: #06c755;
+    --mine-shaft: #333333;
+    --pomegranate: #f84519;
+    --pomegranate-2: #f84519b2;
+    --pumpkin: #f87423;
+    --saffron: #fec12f;
+    --sazerac: #fff1e3;
+    --white: #ffffff;
+    --white-2: #ffffff33;
+    --font-size-l: 18px;
+    --font-size-m: 16px;
+    --font-size-s: 14px;
+    --font-size-xl: 20px;
+    --font-size-xxl: 24px;
+    --font-size-xxxl: 32px;
+    --font-size-xxxxl: 48px;
+    --font-family-noto_sans_jp: "Noto Sans JP", Helvetica;
+    --font-family-noto_serif_jp: "Noto Serif JP", Helvetica;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+* {
+    box-sizing: border-box;
+}
+user agent stylesheet
+:root {
+    view-transition-name: root;
+}
+user agent stylesheet
+html {
+    display: block;
+}
