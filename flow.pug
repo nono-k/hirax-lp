@@ -1,0 +1,13 @@
+mixin flow()
+  section.p-top__flow.l-container__full
+    .l-container
+      +heading('ヒラックス加盟説明会参加までの<span class="number">3</span>ステップ', 'flow')
+      .p-top__flow-content
+        each val,i in data.flow
+          .p-top__flow-card
+            .p-top__flow-card-img
+              +img(`flow-0${i+1}.svg`)
+            .p-top__flow-card-tag
+              |STEP<span class="num">!{i+1}</span>
+            .p-top__flow-card-text
+              |!{val}
