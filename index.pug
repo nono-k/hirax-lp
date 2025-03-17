@@ -1,0 +1,167 @@
+include mixin
+include data
+include video
+include flow
+
+doctype html
+html(lang="ja")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Document
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+    link(rel="stylesheet", href="../assets/css/styles.css")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.3.0/swiper-bundle.css")
+  body
+    header.l-header
+      h1
+        +pic('FV.jpg', 'FV-sp.jpg', '画期的な事業モデルが支持されています')
+    main.l-main
+      .l-container
+        section.p-top__lead.l-container__full
+          h2.p-top__lead-heading
+            +pic('lead-heading.jpg', 'lead-heading-sp.jpg', '')
+          .p-top__lead-video
+            +video()
+
+        section.p-top__cta.l-container__full
+          h2.p-top__cta-heading
+            |ヒラックス加盟説明会への<br>お申し込みはこちら
+          .c-btn-center
+            a(href="").c-btn__cta
+              |説明会に参加する
+              span.icon
+                +img('btn-cta-icon.svg')
+
+        +flow()
+
+        section.p-top__video
+          +heading('事業説明動画の注目シーン<span class="number">5</span>選', 'video')
+
+          .p-top__video-inner
+            .p-top__video-stack
+              each val,i in data.video
+                .p-top__video-card
+                  .p-top__video-img
+                    +img(`video-0${i+1}.jpg`)
+                  .p-top__video-text
+                    .p-top__video-text-heading
+                      |TOPIC<span>0#{i+1}</span>
+                    .p-top__video-text-desc
+                      |!{val.text}
+                    a(href=val.link).p-top__video-link.link-hover
+                      |このシーンから視聴する
+                      span.icon
+                        +img('video-link-icon.svg')
+          .p-top__video-desc
+            |ヒラックスのビジネスモデルをより理解した状態で、フランチャイズ加盟説明会に<br>参加していただきたいので<span>「事業説明動画」をしっかりとご覧ください。</span>
+
+        section.p-top__about.l-container__full
+          +heading('そもそも<span>デイサービスフランチャイズ</span>とは？', 'about')
+          .p-top__about-inner
+            p.p-top__about-desc
+              |デイサービス運営のノウハウを提供し、加盟店をサポートするビジネスモデルのことです。高齢化社会の進展に伴い、デイサービス需要が高まる中、FC方式での参入が大きく注目されています。
+            .p-top__about-img-wrap
+              .p-top__about-img
+                +img('about-img-01.jpg')
+              .p-top__about-img
+                +img('about-img-02.jpg')
+            .p-top__about-content
+              .p-top__about-content-inner
+                +heading('<span>伸び続ける</span>市場規模', 'about')
+                .p-top__about-content-fig
+                  +img('about-fig.jpg')
+                .p-top__about-content-desc
+                  |デイサービス市場は2025年には4兆円規模に達すると予測されています。<br>一方で、サービスを提供するデイサービス事業所数の伸びは需要増加に追いついておらず、今後さらなる拡大余地があるのが現状です。<br>さらに、さらに近々、介護保険法の改正により、1つの事業所で通所介護と訪問介護を組み合わせるなど、柔軟で多様なサービス展開が可能なる予定です。 この法改正はデイサービス事業者にとって追い風であり、業界の常識を変える大きなチャンスと言えるでしょう。<br>需要の拡大に加え、法改正による事業の幅の広がりを考えると、今がデイサービス参入の絶好のタイミングだと言えます。 地域に必要なサービスを総合的に提供しながら、安定した売上と利益の拡大を実現できる、またとないビジネスチャンスが到来しているのです。
+          .p-top__about-arrow
+            +img('arrow-bottom.svg')
+
+        section.p-top__chance.l-container__full
+          h2.p-top__chance-heading
+            +img('chance-heading.png')
+          .p-top__chance-slider.swiper.js-auto-slider
+            .swiper-wrapper
+              - for (var i = 0; i < 8; i++)
+                .p-top__chance-img.swiper-slide
+                  +img(`chance-0${i+1}.jpg`)
+
+        //- ここから
+        section.p-top__reason
+          +heading('ヒラックスのフランチャイズが<span>手堅い理由</span>', 'reason')
+
+          <p>デイサービスFCは、単独開業と比べて本部の支援を受けられるので開業・運営リスクが低い点が魅力です。ブランド力を活かしつつ地域に密着したサービスを提供でき、利用者・家族から高い評価を得ています。</p>
+
+          <div class="p-top__reason-content">
+            //-  この中をお願いします
+          </div>
+
+
+        section.p-top__reason-2.l-container__full
+          +heading('ヒラックス<span class="number">2</span>つの理由', 'reason')
+          <div class="p-top__reason-2-inner">
+            //-  この中をお願いします
+          </div>
+
+          .p-top__reason-2-new.l-container__full
+            <div class="p-top__reason-2-new-heading">
+              //-  この中に「フランチャイズモデルとは？」を入れてください
+            </div>
+
+
+        section.p-top__strength.l-container__full
+          +heading('ヒラックスフランチャイズ<span class="number">5</span>つの強み', 'strength')
+
+          <div class="p-top__strength-content">
+            //-  この中をお願いします
+          </div>
+
+        //- ここまで
+
+        section.p-top__point.l-container__full
+          +heading('デイサービスFC加盟説明会の<span>見どころ</span>', 'point')
+
+        section.p-top__message.l-container__full
+          +heading('代表 石田 雄嗣からのメッセージ', 'message')
+
+        +flow()
+
+        section.p-top__faq
+          +heading('よくある質問', 'faq')
+
+    footer.l-footer
+      .l-footer__inner
+        .l-footer__logo
+          +img('logo.svg', 'logo-sp.svg', '')
+        nav.l-footer__nav
+          ul.l-footer__nav-list
+            each item in footer.left
+              li.l-footer__nav-item
+                a.l-footer__nav-link(href=item.link)
+                  span.l-footer__nav-icon
+                    +img('footer-icon.svg')
+                  span.l-footer__nav-text
+                    |!{item.text}
+          ul.l-footer__nav-list
+            each item in footer.mid
+              li.l-footer__nav-item
+                a.l-footer__nav-link(href=item.link)
+                  span.l-footer__nav-icon
+                    +img('footer-icon.svg')
+                  span.l-footer__nav-text
+                    |!{item.text}
+          ul.l-footer__nav-list
+            each item in footer.right
+              li.l-footer__nav-item
+                a.l-footer__nav-link(href=item.link)
+                  span.l-footer__nav-icon
+                    +img('footer-icon.svg')
+                  span.l-footer__nav-text
+                    |!{item.text}
+      .l-footer__copy
+        small
+          |Copyright©2024 株式会社SPS All rights reserved.
+
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.3.0/swiper-bundle.min.js")
+    script(src="../assets/js/main.js")
